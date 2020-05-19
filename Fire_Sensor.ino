@@ -1,4 +1,4 @@
-//int buzzer = 8;
+//int buzzer = 8;try when you use with buzzer
 int LED = 13;
 int flame_sensor = 4;
 int flame_detected;
@@ -6,7 +6,7 @@ int flame_detected;
 void setup()
 {
   Serial.begin(9600);
-//  pinMode(buzzer, OUTPUT);
+//  pinMode(buzzer, OUTPUT); try when you use with buzzer
   pinMode(LED, OUTPUT);
   pinMode(flame_sensor, INPUT);
 }
@@ -17,17 +17,15 @@ void loop()
   Serial.print(flame_detected);
   if (flame_detected == 1)
   {
-   //Serial.println("Flame detected...! take action immediately.");
-  //  digitalWrite(buzzer, HIGH);
+  Serial.println("Flame detected...! take action immediately."); //Check in Serial Monitor
+  //  digitalWrite(buzzer, HIGH);try when you use with buzzer
     digitalWrite(LED, HIGH);
-    delay(200);
-    digitalWrite(LED, LOW);
     delay(200);
   }
   else
   {
    // Serial.println("No flame detected. stay cool");
-    //digitalWrite(buzzer, LOW);
+    //digitalWrite(buzzer, LOW);try when you use with buzzer
     digitalWrite(LED, LOW);
   }
   delay(1000);
